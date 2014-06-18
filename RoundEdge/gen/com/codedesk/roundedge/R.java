@@ -1563,6 +1563,7 @@ containing a value of this type.
         public static final int TextAppearance_Sherlock_Widget_PopupMenu=0x7f070045;
         public static final int TextAppearance_Sherlock_Widget_PopupMenu_Large=0x7f070046;
         public static final int TextAppearance_Sherlock_Widget_PopupMenu_Small=0x7f070048;
+        public static final int TextAppearance_Sherlock_Widget_Styled_ActionBar_Subtitle=0x7f070063;
         public static final int TextAppearance_Sherlock_Widget_TextView_SpinnerItem=0x7f07004a;
         public static final int Theme_Sherlock=0x7f07005a;
         public static final int Theme_Sherlock_Light=0x7f07005b;

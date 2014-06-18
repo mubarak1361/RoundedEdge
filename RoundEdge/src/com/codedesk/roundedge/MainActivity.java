@@ -1,5 +1,8 @@
 package com.codedesk.roundedge;
 
+import com.actionbarsherlock.app.ActionBar;
+import com.actionbarsherlock.app.SherlockActivity;
+
 import android.os.Bundle;
 import android.app.Activity;
 import android.content.res.Resources;
@@ -7,12 +10,15 @@ import android.text.TextUtils.TruncateAt;
 import android.view.Menu;
 import android.widget.TextView;
 
-public class MainActivity extends Activity {
+public class MainActivity extends SherlockActivity {
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
+		
+		ActionBar abs = getSupportActionBar();
+		abs.setSubtitle("Hello World !!! A Simple Marquee. Did you Like this ? :)");
 		
 		int subtitleId = Resources.getSystem().
 				getIdentifier("action_bar_subtitle", "id", "android");
@@ -30,12 +36,4 @@ public class MainActivity extends Activity {
 		
 		
 	}
-
-	@Override
-	public boolean onCreateOptionsMenu(Menu menu) {
-		// Inflate the menu; this adds items to the action bar if it is present.
-		getMenuInflater().inflate(R.menu.main, menu);
-		return true;
-	}
-
 }
