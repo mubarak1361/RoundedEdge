@@ -1,0 +1,188 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:bootstrapbutton="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/scrollView1"
+    android:fillViewport="true"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/layout_bg">
+
+        <RelativeLayout
+            android:id="@+id/main"
+            android:paddingBottom="@dimen/activity_vertical_margin"
+    		android:paddingLeft="@dimen/activity_horizontal_margin"
+    		android:paddingRight="@dimen/activity_horizontal_margin"
+    		android:paddingTop="@dimen/activity_vertical_margin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/pkarea"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentTop="true"
+                android:text="PICKUP AREA" />
+
+            <com.beardedhen.androidbootstrap.BootstrapEditText
+                android:id="@+id/acpick"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentRight="true"
+                android:layout_below="@+id/pkarea"
+                android:layout_marginTop="5dp"
+                android:ems="10"
+                bootstrapbutton:be_state="primary"
+                bootstrapbutton:be_roundedCorners="true"
+                android:hint="Source" >
+
+            </com.beardedhen.androidbootstrap.BootstrapEditText>
+
+            <TextView
+                android:id="@+id/dparea"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentRight="true"
+                android:layout_below="@+id/acpick"
+                android:layout_marginTop="10dp"
+                android:text="DROP AREA" />
+
+            <AutoCompleteTextView
+                android:id="@+id/acdrop"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentRight="true"
+                android:layout_below="@+id/dparea"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/et_shape"
+                android:paddingTop="6dp"
+                android:paddingBottom="6dp"
+                android:paddingLeft="8dp"
+                android:paddingRight="8dp"
+                android:ems="10"
+                android:hint="Destination" >
+
+            </AutoCompleteTextView>
+
+            <TextView
+                android:id="@+id/pkdate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentRight="true"
+                android:layout_below="@+id/acdrop"
+                android:layout_marginTop="10dp"
+                android:text="PICKUP DATE" />
+
+            <EditText
+                android:id="@+id/pkdedit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentRight="true"
+                android:layout_below="@+id/pkdate"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/et_shape"
+                android:paddingTop="6dp"
+                android:paddingBottom="6dp"
+                android:paddingLeft="8dp"
+                android:paddingRight="8dp"
+                android:ems="10"
+                android:hint="DD/MM/YYYY"
+                android:inputType="date" >
+            </EditText>
+
+            <TextView
+                android:id="@+id/pktime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentRight="true"
+                android:layout_below="@+id/pkdedit"
+                android:layout_marginTop="10dp"
+                android:text="PICKUP TIME" />
+
+            <EditText
+                android:id="@+id/pktedit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentRight="true"
+                android:layout_below="@+id/pktime"
+                android:background="@drawable/et_shape"
+                android:paddingTop="6dp"
+                android:paddingBottom="6dp"
+                android:paddingLeft="8dp"
+                android:paddingRight="8dp"
+                android:ems="10"
+                android:hint="Eg.6:30PM"
+                android:layout_marginTop="5dp"
+                android:inputType="time" >
+
+            </EditText>
+
+             <LinearLayout
+                 android:id="@+id/relativeLayout2"
+                 android:layout_width="match_parent"
+                 android:layout_height="wrap_content"
+                 android:layout_alignParentLeft="true"
+                 android:layout_below="@+id/pktedit"
+                 android:layout_marginTop="15dp"
+                 android:orientation="horizontal" >
+
+                 <Button
+                     android:id="@+id/prev_button"
+                     android:layout_width="0dp"
+                     android:layout_height="wrap_content"
+                     android:layout_weight="1"
+                     android:background="@drawable/reset_btn"
+                     android:shadowColor="#636363"
+                     android:shadowDx="-1"
+                     android:shadowDy="-1"
+                     android:shadowRadius="1"
+                     android:text="Reset"
+                     android:textStyle="bold"
+                     android:layout_marginRight="2dp"
+                     android:textColor="#ffffff" />
+
+                 <Button
+                     android:id="@+id/next_button"
+                     android:layout_width="0dp"
+                     android:layout_height="wrap_content"
+                     android:layout_weight="1"
+                     android:layout_marginLeft="2dp"
+                     android:background="@drawable/taxi_btn"
+                     android:textStyle="bold"
+                     android:shadowColor="#636363"
+                     android:shadowDx="-1"
+                     android:shadowDy="-1"
+                     android:shadowRadius="1"
+                     android:text="Book Now"
+                     android:textColor="#ffffff" />
+             </LinearLayout>
+
+             <Button
+                 android:id="@+id/button1"
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:layout_alignParentLeft="true"
+                 android:layout_alignParentRight="true"
+                 android:layout_marginTop="5dp"
+                 android:textStyle="bold"
+                 android:shadowColor="#636363"
+                 android:shadowDx="-1"
+                 android:shadowDy="-1"
+                 android:shadowRadius="1"
+                 android:textColor="#ffffff" 
+                 android:background="@drawable/custom_btn"
+                 android:layout_below="@+id/relativeLayout2"
+                 android:text="Book Later" />
+
+        </RelativeLayout>
+
+
+</ScrollView>
