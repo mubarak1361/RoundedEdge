@@ -34,6 +34,7 @@ public class MainActivity extends SherlockActivity {
 				    mAppSubtitle.setSelected(true);
 				    mAppSubtitle.setMarqueeRepeatLimit(-1);
 				    
+				    
 		
 		
 	}
